@@ -1,0 +1,147 @@
+*{
+    padding:0;
+    margin:0;
+    background-color: rgb(240, 187, 44);
+}
+
+#page{
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    height:100%;
+}
+#title{
+    font-family: 'Crimson Pro', serif;
+    position: relative;
+    width: 100%;
+    height: 10vh;
+    text-align: center;
+    font-size: 6vh;
+    background-color: rgb(53, 191, 245);
+}
+#eggContainer{
+    position:relative;
+    width:50vh;
+    height:40vh;
+    left:50%;
+    top:20vh;
+    transform: translate(-50%,0);
+    background-color: rgb(184, 168, 168);
+}
+#egg{
+    position: relative;
+    width:20vh;
+    height:29vh;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    background-color: white;
+    z-index: +1;
+    animation-name: none;
+    animation-duration: 2s;
+    animation-timing-function:ease-in-out;
+}
+#yolk{
+    display: none;
+    position: relative;
+    top:60%;
+    left:50%;
+    width:15vh;
+    height:15vh;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    transform: translate(-50%,-50%);
+    background-color: rgb(231, 153, 36);
+}
+#eggShadow{
+    position:relative;
+    height:5vh;
+    width: 20vh;
+    top:2vh;
+    left:50%;
+    transform: translate(-50%,0);
+    background-color: rgb(204, 197, 197);
+    border-radius:50% 50% 50% 50%;
+    animation-name: eggShadowAnimation;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+}
+#buttons{
+    position: relative;
+    display:flex;
+    flex-direction: row;
+    top:20vh;
+    width:70vh;
+    height:10vh;
+    left:33.5%;
+    transform:translate((-50%,0));
+}
+#crack{
+    position: relative;
+    top:50%;
+    left:25%;
+    width:10vh;
+    height:3vh;
+    text-align:center;
+    transform: translate((-50%,0));
+    background-color: white;
+    border-radius:10%
+}
+#crack:hover{
+    cursor: pointer;
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#eggCrack1{
+    display: none;
+    position:absolute;
+    top:30%;
+    width:4vh;
+    height:0.1vh;
+    left:24.4vh;
+    transform:rotate(45deg);
+    background-color: black;
+    z-index: +2;
+}
+#eggCrack2{
+    display: none;
+    position:absolute;
+    top:30%;
+    width:4vh;
+    height:0.1vh;
+    left:27vh;
+    transform:rotate(135deg);
+    background-color: black;
+    z-index: +2;
+}
+#eggCrack3{
+    display: none;
+    position:absolute;
+    top:30%;
+    width:4vh;
+    height:0.1vh;
+    left:29.9vh;
+    transform:rotate(45deg);
+    background-color: black;
+    z-index: +2;
+}
+#crossSection{
+    position: relative;
+    top:50%;
+    left:40%;
+    width:15vh;
+    height:3vh;
+    /* transform: translate((-50%,0)); */
+    text-align:center;
+    background-color: white;
+    border-radius:10%
+}
+#crossSection:hover{
+    cursor: pointer;
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+@keyframes eggAnimation{
+    100%{
+        left:60vh;
+    }
+}
