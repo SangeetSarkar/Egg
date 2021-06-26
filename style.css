@@ -20,6 +20,12 @@
     font-size: 6vh;
     background-color: rgb(53, 191, 245);
 }
+#knife{
+    display: none;
+    position:absolute;
+    top:15vh;
+    z-index: +2;
+}
 #eggContainer{
     position:relative;
     width:50vh;
@@ -28,6 +34,16 @@
     top:20vh;
     transform: translate(-50%,0);
     background-color: rgb(184, 168, 168);
+}
+#face{
+    display: none;
+    position: absolute;
+    height:10vh;
+    top:30%;
+    left:50%;
+    transform: translate(-50%,0);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    z-index: +2;
 }
 #egg{
     position: relative;
@@ -39,12 +55,13 @@
     border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
     background-color: white;
     z-index: +1;
-    animation-name: none;
+    /* animation-name: eggAnimation; */
+    /* animation-direction: ; */
     animation-duration: 2s;
     animation-timing-function:ease-in-out;
 }
 #yolk{
-    display: none;
+    opacity:0;
     position: relative;
     top:60%;
     left:50%;
@@ -53,6 +70,8 @@
     border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
     transform: translate(-50%,-50%);
     background-color: rgb(231, 153, 36);
+    animation-name:yolkAnimation;
+    animation-timing-function: linear;
 }
 #eggShadow{
     position:relative;
@@ -140,8 +159,31 @@
     cursor: pointer;
     box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+#pleaseStop{
+    position:absolute;
+    top:110%;
+    left:35%;
+    width:20vh;
+    height:3vh;
+    text-align:center;
+    transform: translate((-50%,-50%));
+    background-color: white;
+    border-radius:3%
+}
+#pleaseStop:hover{
+    cursor: pointer;
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 @keyframes eggAnimation{
     100%{
         left:60vh;
+    }
+}
+ @keyframes yolkAnimation{
+  0%{
+      opacity: 0;
+  }
+    100%{
+        opacity:1;
     }
 }
