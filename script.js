@@ -14,8 +14,14 @@ function crack() {
     }
 }
 function crossSection() {
-    // document.getElementById("eggShadow").style.display = "none";
-    document.getElementById("egg").style.left="60vh";
-    document.getElementById("egg").style.animationName="eggAnimation";
-    document.getElementById("yolk").style.display="block";
+    document.getElementById("eggShadow").style.display = "none";
+    document.getElementById("egg").style.animationName = "eggAnimation";
+    document.getElementById("yolk").style.display = "block";
+    document.getElementById("yolk").style.animationName = "yolkAnimation";
+}
+function pleaseStop()
+{
+    
+    document.getElementById("face").style.display="block";
+    document.getElementById("knife").style.display="block";
 }
